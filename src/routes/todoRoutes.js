@@ -4,7 +4,7 @@ import { getTodos, createTodo, updateTodo, deleteTodo } from "../controllers/tod
 const router = express.Router();
 
 router.get("/",getTodos);
-router.post("/",createTodo);
+router.post("/addtodo",createTodo);
 router.put("/:id",updateTodo);
 router.delete("/:id",deleteTodo);
 

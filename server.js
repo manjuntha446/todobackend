@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import todoRoutes from "./routes/todoRoutes.js";
-import connectDB from "./config/db.js";
+import todoRoutes from "./src/routes/todoRoutes.js";
+import connectDB from "./src/config/db.js";
 import dotenv from "dotenv";
 
 dotenv.config(); // OK for local dev
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.use("/api/todos", todoRoutes);
+app.use("/api/todo", todoRoutes);
 
 app.get("/", (req, res) => {
   res.send("API is running");
